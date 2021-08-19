@@ -10,14 +10,18 @@ const counter = {
    },
 
 };
+
+const decrecentMy = counter.decrement.bind(counter);
+
 const decrementBtn = document.querySelector(".js-decrement");
 const incrementBtn = document.querySelector(".js-increment");
 const valueEL = document.querySelector(".js-value");
 
 
 decrementBtn.addEventListener("click", function () {
-   counter.decrement();
+   decrecentMy();
    valueEL.textContent = counter.value;
+
 });
 
 incrementBtn.addEventListener("click", function () {
